@@ -1,0 +1,49 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- link:
+    ~/.config:
+    ~/.gitconfig:
+    ~/.zshenv:
+    ~/.zshrc:
+
+- create:
+    - ~/Workspaces
+
+- shell:
+    - command: sudo chsh -s /bin/zsh
+    - command: ./xcode.zsh
+      stdin: true
+      stdout: true
+      stderr: true
+      description: Install and Accept xcodebuild license
+    - command: ./homebrew.zsh
+      stdin: true
+      stdout: true
+      stderr: true
+      description: Install Homebrew and all dependencies
+    - command: ./vscode.zsh
+      stdin: true
+      stdout: true
+      stderr: true
+      description: Install VS Code Extensions
+    - command: ./node.zsh
+      stdin: true
+      stdout: true
+      stderr: true
+      description: Install Node Packages
+    - command: ./macos.zsh
+      stdin: true
+      stdout: true
+      stderr: true
+      description: Setup macOS
+    - command: ./misc.zsh
+      stdin: true
+      stdout: true
+      stderr: true
+      description: Miscellaneous
+    - command: source ~/.zshrc
+      stdin: true
