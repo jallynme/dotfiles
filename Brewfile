@@ -11,14 +11,14 @@ tap "mongodb/brew"
 brew "ack"
 # Java build tool
 brew "ant"
+# Shell plugin manager
+brew "antibody"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # Fish completion for brew-cask
 brew "brew-cask-completion"
 # Cross-platform make
@@ -109,8 +109,6 @@ brew "zsh-syntax-highlighting"
 brew "dart-lang/dart/dart"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
-# Prebuilt OpenJDK binaries
-cask "adoptopenjdk8"
 # Toolset to implement parts of Android apps in native code
 cask "android-ndk"
 # Android SDK component
@@ -145,6 +143,8 @@ cask "fork"
 cask "free-download-manager"
 # Web browser
 cask "google-chrome"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
 # Finder Toolbar app to open the current directory in Terminal or Editor
 cask "openinterminal"
 # GUI client for PostgreSQL databases
@@ -159,28 +159,12 @@ cask "spotify"
 cask "tableplus"
 # Tool to install Linux/BSD distributions to a partition or USB drive
 cask "unetbootin"
+# Open-source code editor
+cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
-
-mas "DevCleaner", id: 1388020431
-mas "Developer", id: 640199958
-mas "HazeOver", id: 430798174
-mas "HiddenMe", id: 467040476
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
-mas "Kindle", id: 405399194
-mas "LINE", id: 539883307
-mas "LiquidText", id: 922765270
-mas "Magnet", id: 441258766
-mas "Messenger", id: 1480068668
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft OneNote", id: 784801555
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Redis Server", id: 972359186
-mas "Shazam", id: 897118787
-mas "Slack", id: 803453959
-mas "Telegram", id: 747648890
-mas "Transporter", id: 1450874784
-mas "Xcode", id: 497799835

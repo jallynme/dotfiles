@@ -27,9 +27,15 @@ alias gpull="git pull"
 alias gpush="git push"
 
 # Use ZSH Plugins
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ `uname -m` == 'arm64' ]]; then
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
@@ -43,12 +49,14 @@ zstyle ':plugin:history-search-multi-word' clear-on-cancel 'yes'
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
   autoload -Uz compinit
-  compinit
+  if [[ `uname -m` == 'x86_64' ]]; then
+    compinit
+  fi
 fi
 
 # Add Locations to $path Array
 
-typeset -U path
+typeset -U path 
 
 path=(
   "$N_PREFIX/bin"
@@ -65,4 +73,6 @@ path=(
 
 eval "$(rbenv init -)"
 eval "$(starship init zsh)"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 

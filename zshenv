@@ -8,7 +8,15 @@ export HOMEBREW_CASK_OPTS="--no-quarantine --no-binaries"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 export N_PREFIX="$HOME/.n"
 export PREFIX="$N_PREFIX"
-export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if [[ `uname -m` == 'arm64' ]]; then
+  export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="$(brew --prefix)/share/zsh-syntax-highlighting/highlighters"
+else
+  export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+fi
+
 
 
 function exists() {
