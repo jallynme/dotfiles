@@ -9,9 +9,8 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/H
 export N_PREFIX="$HOME/.n"
 export PREFIX="$N_PREFIX"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 if [[ `uname -m` == 'arm64' ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="$(brew --prefix)/share/zsh-syntax-highlighting/highlighters"
 else
   export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
