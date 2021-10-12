@@ -12,10 +12,8 @@ bierner.color-info
 bradlc.vscode-tailwindcss
 bung87.vscode-gemfile
 bungcip.better-toml
-castwide.solargraph
 christian-kohler.npm-intellisense
 chrmarti.regex
-clarkyu.vscode-sql-beautify
 CoenraadS.bracket-pair-colorizer
 Dart-Code.dart-code
 Dart-Code.flutter
@@ -65,15 +63,14 @@ mtxr.sqltools
 Nash.awesome-flutter-snippets
 naumovs.color-highlight
 necinc.elmmet
-octref.vetur
 PKief.material-icon-theme
 pranaygp.vscode-css-peek
 quicktype.quicktype
 rebornix.ruby
 redhat.vscode-yaml
 sensourceinc.vscode-sql-beautify
-Shan.code-settings-sync
 steoates.autoimport
+TabNine.tabnine-vscode
 tht13.html-preview-vscode
 tht13.python
 Tyriar.sort-lines
@@ -81,6 +78,7 @@ VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-maven
 vscode-icons-team.vscode-icons
 wayou.vscode-todo-highlight
+wholroyd.jinja
 wingrunr21.vscode-ruby
 wmaurer.change-case
 xyz.plsql-language

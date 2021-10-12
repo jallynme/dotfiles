@@ -1,4 +1,3 @@
-tap "adoptopenjdk/openjdk"
 tap "dart-lang/dart"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -15,6 +14,16 @@ brew "ant"
 brew "antibody"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# GNU multiple precision arithmetic library
+brew "gmp"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Generic library support script
+brew "libtool"
+# Library for command-line editing
+brew "readline"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -23,18 +32,12 @@ brew "bat"
 brew "brew-cask-completion"
 # Cross-platform make
 brew "cmake"
-# GNU multiple precision arithmetic library
-brew "gmp"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
 # Programming language for highly scalable real-time systems
 brew "erlang"
 # Functional metaprogramming aware language built on Erlang VM
 brew "elixir"
 # Modern replacement for 'ls'
 brew "exa"
-# Library for command-line editing
-brew "readline"
 # Easiest way to build and release mobile apps
 brew "fastlane"
 # Collection of reusable C++ library artifacts developed at Facebook
@@ -45,6 +48,10 @@ brew "gh"
 brew "git-flow"
 # Git extension for versioning large files
 brew "git-lfs"
+# X.509 and CMS library
+brew "libksba"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Go version management
@@ -53,10 +60,6 @@ brew "goenv"
 brew "gradle"
 # Kubernetes command-line interface
 brew "kubernetes-cli", link: false
-# X.509 and CMS library
-brew "libksba"
-# Generic library support script
-brew "libtool"
 # Command-line interface for SQLite
 brew "sqlite"
 # Keep your Mac's application settings in sync
@@ -109,6 +112,10 @@ brew "zsh-syntax-highlighting"
 brew "dart-lang/dart/dart"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
+# Prebuilt OpenJDK binaries
+cask "adoptopenjdk8"
+# Application launcher and productivity software
+cask "alfred"
 # Toolset to implement parts of Android apps in native code
 cask "android-ndk"
 # Android SDK component
@@ -134,19 +141,19 @@ cask "dozer"
 cask "dropbox"
 # Web browser
 cask "firefox"
-# UI toolkit for building applications for mobile, web and desktop
-cask "flutter"
 cask "font-hack-nerd-font"
-# GIT client
-cask "fork"
 # Download accelerator and organizer
 cask "free-download-manager"
 # Web browser
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# App to write, plan, collaborate, and get organized
+cask "notion"
 # Finder Toolbar app to open the current directory in Terminal or Editor
 cask "openinterminal"
+# App wrapper for Postgres
+cask "postgres-unofficial"
 # GUI client for PostgreSQL databases
 cask "postico"
 # Collaboration platform for API development
@@ -163,8 +170,18 @@ cask "unetbootin"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+mas "DevCleaner", id: 1388020431
+mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836
+mas "HiddenMe", id: 467040476
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "Messenger", id: 1480068668
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Shazam", id: 897118787
+mas "Slack", id: 803453959
+mas "Speedtest", id: 1153157709
+mas "Transporter", id: 1450874784
+mas "Xcode", id: 497799835

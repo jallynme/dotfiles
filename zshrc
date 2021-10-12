@@ -13,6 +13,7 @@ alias kbc="kubectl"
 alias ls="exa"
 alias lsg="exa | grep"
 alias man="tldr"
+alias redis="redis-cli"
 alias rn="npx react-native"
 alias rnra="rn run-android"
 alias rnri="rn run-ios"
@@ -27,7 +28,7 @@ alias gpull="git pull"
 alias gpush="git push"
 
 # Use ZSH Plugins
-if [[ `uname -m` == 'arm64' ]]; then
+if [[ $(uname -m) == 'arm64' ]]; then
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
   source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -49,14 +50,14 @@ zstyle ':plugin:history-search-multi-word' clear-on-cancel 'yes'
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
   autoload -Uz compinit
-  if [[ `uname -m` == 'x86_64' ]]; then
+  if [[ $(uname -m) == 'x86_64' ]]; then
     compinit
   fi
 fi
 
 # Add Locations to $path Array
 
-typeset -U path 
+typeset -U path
 
 path=(
   "$N_PREFIX/bin"
@@ -68,6 +69,7 @@ path=(
   "$HOME/flutter/bin"
   "$JAVA_HOME/bin"
   "$GRADLE_HOME/bin"
+  "$FLUTTER_HOME/bin"
   $path
 )
 
@@ -76,3 +78,4 @@ eval "$(starship init zsh)"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+. /opt/homebrew/opt/asdf/libexec/asdf.sh

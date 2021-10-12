@@ -1,22 +1,23 @@
 export ANDROID_AVD_HOME="~/.android/avd"
-export ANDROID_HOME=$HOME/Android/sdk
-export ANDROID_SDK=$HOME/Library/Android/sdk
+export ANDROID_HOME="$HOME/Android/sdk"
+export ANDROID_SDK="$HOME/Library/Android/sdk"
+export ANDROID_SDK_MANAGER="$ANDROID_SDK/tools/bin/sdkmanager"
 export DOTFILES="$HOME/dotfiles"
-export GRADLE_HOME=/usr/local/opt/gradle
+export GRADLE_HOME="/usr/local/opt/gradle"
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 export HOMEBREW_CASK_OPTS="--no-quarantine --no-binaries"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
 export N_PREFIX="$HOME/.n"
 export PREFIX="$N_PREFIX"
+export FLUTTER_HOME="$HOME/flutter"
+export ASDF_FLUTTER="$HOME/.asdf/shims/flutter"
 
-if [[ `uname -m` == 'arm64' ]]; then
+if [[ $(uname -m) == 'arm64' ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="$(brew --prefix)/share/zsh-syntax-highlighting/highlighters"
 else
   export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 fi
-
-
 
 function exists() {
   # `command -v` is similar to `which`
