@@ -30,6 +30,8 @@ brew "bash"
 brew "bat"
 # Fish completion for brew-cask
 brew "brew-cask-completion"
+# Command-line interface for SQLite
+brew "sqlite"
 # Cross-platform make
 brew "cmake"
 # Programming language for highly scalable real-time systems
@@ -40,6 +42,8 @@ brew "elixir"
 brew "exa"
 # Easiest way to build and release mobile apps
 brew "fastlane"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Collection of reusable C++ library artifacts developed at Facebook
 brew "folly"
 # GitHub command-line tool
@@ -60,22 +64,20 @@ brew "goenv"
 brew "gradle"
 # Kubernetes command-line interface
 brew "kubernetes-cli", link: false
-# Command-line interface for SQLite
-brew "sqlite"
 # Keep your Mac's application settings in sync
 brew "mackup"
 # Mac App Store command-line interface
 brew "mas"
 # Java-based project management
 brew "maven"
+# Run a Kubernetes cluster locally
+brew "minikube"
 # Node version management
 brew "n"
 # HTTP/2 C Library
 brew "nghttp2"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Platform built on V8 to build network applications
-brew "node", link: false
+brew "node"
 # Object-relational database system
 brew "postgresql"
 # Python version management
@@ -154,14 +156,14 @@ cask "notion"
 cask "openinterminal"
 # App wrapper for Postgres
 cask "postgres-unofficial"
-# GUI client for PostgreSQL databases
-cask "postico"
 # Collaboration platform for API development
 cask "postman"
 # Move and resize windows with ease
 cask "spectacle"
 # Music streaming service
 cask "spotify"
+# Video game digital distribution service
+cask "steam"
 # Native GUI tool for relational databases
 cask "tableplus"
 # Tool to install Linux/BSD distributions to a partition or USB drive

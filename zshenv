@@ -1,7 +1,8 @@
-export ANDROID_AVD_HOME="~/.android/avd"
+export ANDROID_AVD_HOME="$HOME/.android/avd"
 export ANDROID_HOME="$HOME/Android/sdk"
-export ANDROID_SDK="$HOME/Library/Android/sdk"
-export ANDROID_SDK_MANAGER="$ANDROID_SDK/tools/bin/sdkmanager"
+export ANDROID_SDK_HOME="$HOME/Library/Android/sdk"
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export ANDROID_SDK_MANAGER="$ANDROID_SDK_HOME/tools/bin/sdkmanager"
 export DOTFILES="$HOME/dotfiles"
 export GRADLE_HOME="/usr/local/opt/gradle"
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
@@ -14,9 +15,11 @@ export ASDF_FLUTTER="$HOME/.asdf/shims/flutter"
 
 if [[ $(uname -m) == 'arm64' ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
+  export ANDROID_NDK_HOME="$(brew --prefix)/share/android-ndk"
   export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="$(brew --prefix)/share/zsh-syntax-highlighting/highlighters"
 else
   export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+  export ANDROID_NDK_HOME="/usr/local/android-ndk"
 fi
 
 function exists() {

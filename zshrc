@@ -1,5 +1,6 @@
 # Alias commands
 
+alias aem="emulator -avd Pixel_3a_API_31_arm64-v8a"
 alias bbd="brew bundle dump --all --force --describe"
 alias bi="brew install --no-quarantine"
 alias bui="brew uninstall "
@@ -13,6 +14,7 @@ alias kbc="kubectl"
 alias ls="exa"
 alias lsg="exa | grep"
 alias man="tldr"
+alias mnk="minikube"
 alias redis="redis-cli"
 alias rn="npx react-native"
 alias rnra="rn run-android"
@@ -61,10 +63,10 @@ typeset -U path
 
 path=(
   "$N_PREFIX/bin"
-  "$ANDROID_SDK/emulator"
-  "$ANDROID_SDK/platform-tools"
-  "$ANDROID_SDK/tools"
-  "$ANDROID_SDK/tools/bin"
+  "$ANDROID_SDK_HOME/emulator"
+  "$ANDROID_SDK_HOME/platform-tools"
+  "$ANDROID_SDK_HOME/tools"
+  "$ANDROID_SDK_HOME/tools/bin"
   "$HOME/.rbenv/bin"
   "$HOME/flutter/bin"
   "$JAVA_HOME/bin"

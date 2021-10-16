@@ -26,6 +26,9 @@ defaults write -g InitialKeyRepeat -int 15 # normal minimum is 15 (225 ms)
 # System Preferences > Accessibility > Pointer Control > Mouse & Trackpad > Trackpad Options > Enable Dragging > Three Finger Drag (NOTE: The GUI doesn't update)
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 
+# Set Details Screencapture Location > to Desktop with using Command + Shift + 5.
+defaults write com.apple.screencapture location ~/Desktop
+
 # Finish macOS Setup
 killall Finder
 killall Dock
